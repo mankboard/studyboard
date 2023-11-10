@@ -26,11 +26,11 @@ const ThemeSettings = () => {
         <div className='flex-col border-t-1 border-color p-4 ml-4'>
           <p className='font-semibold text-lg' style={{color}}>Theme Options</p>
           <div className='mt-4'>
-            <input type="radio" id='light' name='theme' value='Light' className=' cursor-pointer' onChange={setMode} checked={chvar1} />
+            <input type="radio" id='light' name='theme' value='Light' className=' cursor-pointer' onChange={setMode}  checked={chvar1} />
             <label htmlFor="light" className='ml-2 text-md cursor-pointer' style={{color}}>Light</label>
           </div>
           <div className='mt-4'>
-            <input type="radio" id='dark' name='theme' value='Dark' className=' cursor-pointer' onChange={setMode} checked={chvar} />
+            <input type="radio" id='dark' name='theme' value='Dark' className=' cursor-pointer' onChange={setMode}  checked={chvar} />
             <label htmlFor="dark" className='ml-2 text-md cursor-pointer' style={{color}}>Dark</label>
           </div>
         </div>

@@ -29,6 +29,7 @@ export const ContextProvider = ({children}) => {
         const newmod = localStorage.getItem('themeMode')
         setCurrentMode(newmod)
     }, [])
+    
     const setMode = (e) => {
         setCurrentMode(e.target.value)
 
@@ -63,7 +64,7 @@ export const ContextProvider = ({children}) => {
             themeSettings,
             setThemeSettings,
             setColor,
-            setMode
+            setMode,
         }}
         >
             {children}
