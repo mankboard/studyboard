@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
 
 const StateContext = createContext();
 
@@ -23,7 +23,12 @@ export const ContextProvider = ({children}) => {
     const [screenSize, setScreenSize] = useState(undefined)
     const [currentColor, setCurrentColor] = useState('#03C9D7')
     const [currentMode, setCurrentMode] = useState('Light')
-
+    useEffect(() => {
+        const newcol = localStorage.getItem('colorMode')
+        setCurrentColor(newcol)
+        const newmod = localStorage.getItem('themeMode')
+        setCurrentMode(newmod)
+    }, [])
     const setMode = (e) => {
         setCurrentMode(e.target.value)
 

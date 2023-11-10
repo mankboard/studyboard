@@ -10,6 +10,8 @@ import { useStateContext } from '../contexts/ContextProvider'
 const ThemeSettings = () => {
   const {setColor, setMode, currentMode, currentColor, setThemeSettings, setisopen} = useStateContext();
   const color = currentColor
+  const chvar = currentMode === 'Dark' ? true : false;
+  const chvar1 = currentMode === 'Light' ? true : false;
   return (
     <div className='bg-half-transparent w-screen fixed nav-item top-0 right-0 '>
       <div className='float-right h-screen dark:text-gray-200 bg-white dark:bg-black w-400 max-w-fit'>
@@ -24,11 +26,11 @@ const ThemeSettings = () => {
         <div className='flex-col border-t-1 border-color p-4 ml-4'>
           <p className='font-semibold text-lg' style={{color}}>Theme Options</p>
           <div className='mt-4'>
-            <input type="radio" id='light' name='theme' value='Light' className=' cursor-pointer' onChange={setMode} checked={currentMode === 'Light'} />
+            <input type="radio" id='light' name='theme' value='Light' className=' cursor-pointer' onChange={setMode} checked={chvar1} />
             <label htmlFor="light" className='ml-2 text-md cursor-pointer' style={{color}}>Light</label>
           </div>
           <div className='mt-4'>
-            <input type="radio" id='dark' name='theme' value='Dark' className=' cursor-pointer' onChange={setMode} checked={currentMode === 'Dark'} />
+            <input type="radio" id='dark' name='theme' value='Dark' className=' cursor-pointer' onChange={setMode} checked={chvar} />
             <label htmlFor="dark" className='ml-2 text-md cursor-pointer' style={{color}}>Dark</label>
           </div>
         </div>
@@ -56,4 +58,3 @@ const ThemeSettings = () => {
 
 export default ThemeSettings
 
-// LICENSE
