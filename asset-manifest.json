@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/studyboard/static/css/main.cba38598.css",
+    "main.js": "/studyboard/static/js/main.610a21c7.js",
+    "index.html": "/studyboard/index.html",
+    "main.cba38598.css.map": "/studyboard/static/css/main.cba38598.css.map",
+    "main.610a21c7.js.map": "/studyboard/static/js/main.610a21c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cba38598.css",
+    "static/js/main.610a21c7.js"
+  ]
+}
